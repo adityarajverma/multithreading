@@ -56,36 +56,24 @@ class Task2 implements Runnable
     }
 }
 
-class Pen
-{
-
-
-    public synchronized void getPen()
-    {
+class Pen {
+    public synchronized void getPen() {
         System.out.println("Getting Pen");
     }
 
-    public synchronized void writeWithPenPaper(Paper paper)
-    {
-        paper.getPaper();
+    public synchronized void writeWithPenPaper(Paper paper) {
         System.out.println("Writing with pen and paper");
-
+        paper.getPaper();
     }
 }
 
-class Paper
-{
-    public synchronized void getPaper()
-    {
+class Paper {
+    public synchronized void getPaper() {
         System.out.println("Getting Paper");
     }
 
-    public synchronized void writeWithPaperPen(Pen pen)
-    {
-        pen.getPen();
+    public synchronized void writeWithPaperPen(Pen pen) {
         System.out.println("Writing with paper and pen");
-
+        pen.getPen();
     }
-
 }
-
